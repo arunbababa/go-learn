@@ -12,6 +12,7 @@ func main() {
 	arr3 := [3]int{1, 2, 3}
 	fmt.Println(arr3)
 
+	// これで要素数を自動カウントしてくれるすげぇ！！
 	arr4 := [...]string{"C", "D"}
 	fmt.Println(arr4)
 
