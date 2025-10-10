@@ -1,42 +1,25 @@
 package main
 
-import "fmt"
-
-var i int = 100
-var s string = "Golang"
-
-var t, f bool = true, false
-
-var (
-	ii int    = 1000
-	ss string = "Go"
+import (
+	"fmt"
 )
 
-var i2 int
+var i int = 5
 
-var sss string
-
-//i3 := 100
+func iniFunc() {
+	var ini string = "arunba"
+	fmt.Println(ini)
+	// 
+}
 
 func main() {
-	fmt.Println(i2)
-	i2 = 150
-	fmt.Println(i2)
+	fmt.Println(i)
 
-	fmt.Println(sss)
-	sss = "Go!!"
-	fmt.Println(sss)
+	// すごい、グローバルというかまぁスコープ外の変数は利用できない！たとえ上位のスコープデモ！！
+	// これエラー出る
+	// fmt.Println(ini)
 
-	i2 = 200
-	fmt.Println(i2)
-
-	i3 := 200
-	fmt.Println(i3)
-
-	//i3 := 300
-
-	i3 = 300
-
-	//i3 = "string"
-
+	// すごい、変数は必ず使わないといけない！！
+	var useItPlease int = 100
+	fmt.Println(useItPlease)
 }
