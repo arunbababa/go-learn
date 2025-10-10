@@ -2,7 +2,13 @@ package main
 
 import "fmt"
 
+// 定数はグローバルでOK、他のパッケージ空も使える
+const ARU = "arunba"
+
 func main() {
+
+	fmt.Println(ARU)
+
 	const Pi = 3.14
 	//const Pi = 3
 
