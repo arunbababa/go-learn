@@ -8,14 +8,18 @@ import (
 
 var todoList []string // <1>
 
+// インターフェースを利用しwとrを受け取る
 func handleTodo(w http.ResponseWriter, r *http.Request) { // <5>
 	t, _ := template.ParseFiles("templates/todo.html") // <6>
 	t.Execute(w, todoList)                             // <7>
 }
 
 func main() {
+	// これ全く新しいtodoListを作成しているのか？
 	todoList = append(todoList, "顔を洗う", "朝食を食べる", "歯を磨く") // <2>
+	
 
+	// 静的ファイルを提供する
 	http.Handle("/static/",
 		http.StripPrefix("/static/", http.FileServer(http.Dir("static")))) // <3>
 
