@@ -39,6 +39,7 @@ func startSession(w http.ResponseWriter) (string, error) { // <4>
 		Name:     cookieSessionId,
 		Value:    sessionId,
 		Expires:  time.Now().Add(600 * time.Second),
+		// これがあることでjsからのアクセスを禁止している
 		HttpOnly: true,
 	}
 
