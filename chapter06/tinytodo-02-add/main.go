@@ -17,7 +17,7 @@ func handleAdd(w http.ResponseWriter, r *http.Request) { // <1>
 	r.ParseForm()
 	todo := r.Form.Get("todo")
 	todoList = append(todoList, todo) // <3>
-	handleTodo(w, r)                  // <4>
+	http.Redirect(w, r, "/todo", 303)                // <4>
 }
 
 func main() {
